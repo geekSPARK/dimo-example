@@ -26,7 +26,7 @@ class Config {
   }
 }
 
-config = new Config( 50.0, 16, 1050, 1050);
+config = new Config( 50.0, 16, 1680, 1050);
 int flag=0;
 
 /* @pjs preload="dsc_0085a.jpg"; */
@@ -75,12 +75,13 @@ void draw(){
   // Fill canvas grey
   // background( 100 );
 
+  clr = frameCount % 255; // throbbing effect
   noStroke();
-  fill( 255, 108, 108, 150);
+  fill( clr, 255-clr, (128+clr)%255, 150);
   ellipse( config.X, config.Y, config.radius+40, config.radius+40 );
 
   // Set fill-color to blue
-  fill( 255, 255, 184 );
+  fill( 255-clr, clr, (300+clr)%255, 150);
 
   // Set stroke-color white
   stroke(255); 
