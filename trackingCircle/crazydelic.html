@@ -11,18 +11,21 @@ coffee_draw = function(p5) {
   };
   return p5.draw = function() {
     var bean, x, x_off, y, y_off, _i, _len, _ref, _results;
-    x_off = p5.frameCount * 0.0003;
-    y_off = x_off + 20;
-    x = p5.noise(x_off) * p5.width;
-    y = p5.noise(y_off) * p5.height;
-    if (p5.frameCount % 8 === 0) {
-      bean = new Bean(p5, {
-        x: x,
-        y: y,
-        x_off: x_off,
-        y_off: y_off
-      });
-      this.beans.push(bean);
+    if (p5.frameCount % 5 === 0) {
+      var _i; for (_i=1; _i< 5; ++_i) {
+        x_off = p5.frameCount * (0.0003+(_i/1000));
+        y_off = x_off + 20+_i;
+        x = p5.noise(x_off) * p5.width;
+        y = p5.noise(y_off) * p5.height;
+
+        bean = new Bean(p5, {
+          x: x,
+          y: y,
+          x_off: x_off,
+          y_off: y_off
+        });
+        this.beans.push(bean);
+      }
     }
     _ref = this.beans;
     _results = [];
