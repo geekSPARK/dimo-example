@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>B A M</title>
+	<link rel="stylesheet" href="tag.css">
+</head>
+
+<body>
+
+<svg width="1024" height="768" style="background:transparent">
+	<g id="turrets">
+		<circle id="turret_0" r="100" />
+		<circle id="turret_1" r="100" />
+		<circle id="turret_2" r="100" />
+	</g>
+	<circle id="player_red" style="fill:rgba(255,20,10,0.6)" r="30" />
+	<circle id="player_green" style="fill:rgba(25,255,30,0.6)" r="30" />
+	<circle id="player_blue" style="fill:rgba(55,100,255,0.6)" r="30" />
+	<g id="tokens">
+		<circle id="token_0" r="10" />
+		<circle id="token_1" r="10" />
+		<circle id="token_2" r="10" />
+		<circle id="token_3" r="10" />
+		<circle id="token_4" r="10" />
+		<circle id="token_5" r="10" />
+		<circle id="token_6" r="10" />
+		<circle id="token_7" r="10" />
+		<circle id="token_8" r="10" />
+		<circle id="token_9" r="10" />
+	</g>
+	<g id="bullets">
+		<rect id="bullet_0" width="10" height="4"/>
+		<rect id="bullet_1" width="10" height="4"/>
+		<rect id="bullet_2" width="10" height="4"/>
+		<rect id="bullet_3" width="10" height="4"/>
+		<rect id="bullet_4" width="10" height="4"/>
+		<rect id="bullet_5" width="10" height="4"/>
+		<rect id="bullet_6" width="10" height="4"/>
+		<rect id="bullet_7" width="10" height="4"/>
+		<rect id="bullet_8" width="10" height="4"/>
+		<rect id="bullet_9" width="10" height="4"/>
+	</g>
+	<g class="titles">
+		<text id="title_start" x="50%" y="50%">Game Start</text>
+		<text id="title_gameOver" x="50%" y="50%">Game Over</text>
+	</g>
+</svg>
+
+<svg id="debug" style="fill:none; stroke-width:2px; width:1024px; height:768px; position:absolute; top:0; left:0; z-index:10">
+	<circle id="red" r="2" style="stroke:red" cx="50" cy="50"/>
+	<circle id="green" r="7" style="stroke:green" cx="50" cy="50"/>
+	<circle id="blue" r="12" style="stroke:blue" cx="50" cy="50"/>
+</svg>
+
+
+<script src="tag.js" type="text/javascript"></script>
+<script src="../faker.js" type="text/javascript"></script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+body{
+	background-color: #222;
+	margin:0;
+}
+
+#turrets circle{
+	fill:rgba(255,0,200,0.1);
+	stroke:rgba(255,0,200,1);
+}
+
+#tokens circle{
+	fill:gold;
+	stroke:none;
+}
+
+#bullets rect{
+	fill:white;
+	stroke:orange;
+	stroke-weight:1px;
+}
